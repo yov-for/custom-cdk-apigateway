@@ -11,7 +11,7 @@ export class ApiPipelineStack extends cdk.Stack {
       pipelineName: 'DevPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('yov-for/custom-cdk-apigateway', 'dev', { authentication: cdk.SecretValue.secretsManager('github-token') }),
-        commands: ['npm ci', 'npx cdk synth']
+        commands: ['npm ci', 'npm run build', 'npx cdk synth']
       })
     });
 
