@@ -7,6 +7,6 @@ exports.handler = async (event) => {
       "Access-Control-Allow-Headers": "*",
       "Access-Control-Allow-Origin": "*",
     },
-    body: JSON.stringify(`Hello, CDK! You've hit ${event.path}\n`)
+    body: JSON.stringify(`Hello, CDK! You've hit ${event.path}\n. Litle change`)
   }
 }
